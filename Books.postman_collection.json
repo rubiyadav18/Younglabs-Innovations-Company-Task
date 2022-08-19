@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "3d97712f-24e9-4bd1-ac76-90f1395b8bbd",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21360538"
+	},
+	"item": [
+		{
+			"name": "SignUp-User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userName\" :\"rubi yadav\",\n\"password\":\"12345\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/User/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"User",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userName\" :\"rubi yadav\",\n\"password\":\"12345\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/User/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create/book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmU2ZWJiZTMyMWFhNDRkMDVhZWQ2MiIsImlhdCI6MTY2MDg0MTY2MCwiZXhwIjoxNjYxNDQ2NDYwfQ.DW2EHxhxjUW1os5f9e9-xfUOvzyHd3kbb8qtLH2mv9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookName",
+							"value": "Short story",
+							"type": "text"
+						},
+						{
+							"key": "bookPrize",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "Authorname",
+							"value": "Tanu yadav",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "myField",
+							"type": "file",
+							"src": "/home/kaushal/Downloads/247556629_1037809740143101_5964185266942294161_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/book/create/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"create",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-All-Books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmU2ZWJiZTMyMWFhNDRkMDVhZWQ2MiIsImlhdCI6MTY2MDg0MTY2MCwiZXhwIjoxNjYxNDQ2NDYwfQ.DW2EHxhxjUW1os5f9e9-xfUOvzyHd3kbb8qtLH2mv9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/get/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"get",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmU2ZWJiZTMyMWFhNDRkMDVhZWQ2MiIsImlhdCI6MTY2MDg0MTY2MCwiZXhwIjoxNjYxNDQ2NDYwfQ.DW2EHxhxjUW1os5f9e9-xfUOvzyHd3kbb8qtLH2mv9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/delete/book/62fe70edaf7aac15d54e8cee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"delete",
+						"book",
+						"62fe70edaf7aac15d54e8cee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Books-Images",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmU2ZWJiZTMyMWFhNDRkMDVhZWQ2MiIsImlhdCI6MTY2MDg0MTY2MCwiZXhwIjoxNjYxNDQ2NDYwfQ.DW2EHxhxjUW1os5f9e9-xfUOvzyHd3kbb8qtLH2mv9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookName",
+							"value": "Stores",
+							"type": "text"
+						},
+						{
+							"key": "bookPrize",
+							"value": "600",
+							"type": "text"
+						},
+						{
+							"key": "Authorname",
+							"value": "Shalu",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "myField",
+							"type": "file",
+							"src": "/home/kaushal/Downloads/247556629_1037809740143101_5964185266942294161_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/book/update/book/62fe70edaf7aac15d54e8cee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"update",
+						"book",
+						"62fe70edaf7aac15d54e8cee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
